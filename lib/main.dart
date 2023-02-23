@@ -5,6 +5,7 @@ import 'package:prop/Screens/home/home_screen.dart';
 import 'package:prop/utils/constants.dart';
 
 import 'Screens/Login/login_screen.dart';
+import 'Screens/components/bottomNavigationBar.dart';
 import 'firebase_options.dart';
 
 void main() async {
@@ -27,11 +28,12 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: kBackgroundColor,
       ),
       // home: const HomeScreen(),
-      initialRoute: '/login',
+      initialRoute: '/navigator',
       debugShowCheckedModeBanner: false,
       routes: {
         '/home': (context) => const HomeScreen(),
         '/login': (context) => const LoginScreen(),
+        '/navigator': (context) => const MyBottomNavBar(),
       },
     );
   }

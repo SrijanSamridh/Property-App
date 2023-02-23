@@ -24,6 +24,6 @@ Future<void> signInWithGoogle(dynamic context) async {
     Navigator.pushReplacementNamed(context, '/login');
   }
   else{
-    Navigator.pushReplacementNamed(context, '/home');
+    Navigator.pushReplacementNamed(context, '/navigator');
   }
 }
