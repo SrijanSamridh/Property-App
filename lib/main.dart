@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:prop/Screens/home/home_screen.dart';
 import 'package:prop/utils/constants.dart';
 
+import 'Screens/Login/Login_screen.dart';
+
 void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
@@ -16,8 +18,13 @@ class MyApp extends StatelessWidget {
         primaryColor: kPrimaryColor,
         scaffoldBackgroundColor: kBackgroundColor,
       ),
-      home: const HomeScreen(),
+      // home: const HomeScreen(),
+      initialRoute: '/login',
       debugShowCheckedModeBanner: false,
+      routes: {
+        '/': (context) => const HomeScreen(),
+        '/login': (context) => const LoginScreen(),
+      },
     );
   }
 }
