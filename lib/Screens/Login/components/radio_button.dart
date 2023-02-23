@@ -16,33 +16,36 @@ class _RadioButtonState extends State<RadioButton> {
   
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: <Widget>[
-        ListTile(
-          title: const Text('Land Owner', style: TextStyle(fontWeight: FontWeight.bold, letterSpacing: 3)),
-          leading: Radio<SingingCharacter>(
-            value: SingingCharacter.owner,
-            groupValue: _character,
-            onChanged: (SingingCharacter? value) {
-              setState(() {
-                _character = value;
-              });
-            },
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 25.0),
+      child: Column(
+        children: <Widget>[
+          ListTile(
+            title: const Text('Land Owner', style: TextStyle(fontWeight: FontWeight.bold, letterSpacing: 3, fontSize: 20)),
+            leading: Radio<SingingCharacter>(
+              value: SingingCharacter.owner,
+              groupValue: _character,
+              onChanged: (SingingCharacter? value) {
+                setState(() {
+                  _character = value;
+                });
+              },
+            ),
           ),
-        ),
-        ListTile(
-          title: const Text('Land Seeker', style: TextStyle(fontWeight: FontWeight.bold, letterSpacing: 3)),
-          leading: Radio<SingingCharacter>(
-            value: SingingCharacter.seeker,
-            groupValue: _character,
-            onChanged: (SingingCharacter? value) {
-              setState(() {
-                _character = value;
-              });
-            },
+          ListTile(
+            title: const Text('Land Seeker', style: TextStyle(fontWeight: FontWeight.bold, letterSpacing: 3, fontSize: 20)),
+            leading: Radio<SingingCharacter>(
+              value: SingingCharacter.seeker,
+              groupValue: _character,
+              onChanged: (SingingCharacter? value) {
+                setState(() {
+                  _character = value;
+                });
+              },
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }
