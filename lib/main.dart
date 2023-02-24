@@ -5,6 +5,8 @@ import 'package:prop/Screens/home/home_screen.dart';
 import 'package:prop/utils/constants.dart';
 
 import 'Screens/Login/login_screen.dart';
+import 'Screens/SplashScreens/splash.dart';
+import 'Screens/api_test.dart';
 import 'Screens/components/bottomNavigationBar.dart';
 import 'firebase_options.dart';
 
@@ -28,12 +30,14 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: kBackgroundColor,
       ),
       // home: const HomeScreen(),
-      initialRoute: '/navigator',
+      initialRoute: '/api_test',
       debugShowCheckedModeBanner: false,
       routes: {
+        '/splash': (context) => const SplashScreen(),
         '/home': (context) => const HomeScreen(),
         '/login': (context) => const LoginScreen(),
         '/navigator': (context) => const MyBottomNavBar(),
+        '/api_test': (context) => const ApiTest(),
       },
     );
   }
